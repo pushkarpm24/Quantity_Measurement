@@ -59,4 +59,11 @@ public class QuantityMeasurementTest {
         Inch inch2 = new Inch(1.0);
         Assert.assertNotEquals(inch1, inch2);
     }
+
+    @Test
+    public void givenValuesWithDifferentType_shouldReturnNotEqual() {
+        Inch inch = new Inch(0.0);
+        Feet feet = new Feet(0.0);
+        Assert.assertNotEquals(inch, feet);
+    }
 }
