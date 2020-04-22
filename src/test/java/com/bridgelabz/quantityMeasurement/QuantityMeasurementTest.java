@@ -33,5 +33,10 @@ public class QuantityMeasurementTest {
 
     }
 
-
+    @Test
+    public void given0InchAnd0Inch_shouldReturnEqual() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(0.0);
+        Assert.assertEquals(inch1, inch2);
+    }
 }
