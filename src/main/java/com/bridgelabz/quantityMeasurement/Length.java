@@ -20,6 +20,11 @@ public class Length {
         return check;
     }
 
+    public double addition(Length that) {
+        double result = unit.performAddition(this, that);
+        return result;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
