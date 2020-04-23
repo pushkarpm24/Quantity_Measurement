@@ -195,4 +195,12 @@ public class QuantityMeasurementTest {
         double resultCheck = feet1.addition(feet2);
         Assert.assertEquals(24.0,resultCheck,0.0);
     }
+
+    @Test
+    public void given2InchAnd2Point5Centimeter_whenAdded_shouldReturnResult() {
+        Length inch = new Length(Unit.INCH, 2.0);
+        Length centimeter = new Length(Unit.CENTIMETER, 2.5);
+        double resultCheck = inch.addition(centimeter);
+        Assert.assertEquals(3,resultCheck,0.0);
+    }
 }
