@@ -1,7 +1,12 @@
 package com.bridgelabz.quantityMeasurement;
 
 public enum Unit {
-    FEET(12.0), INCH(1), YARD(36.0), CENTIMETER(1.0/2.5);
+    FEET(12.0),
+    INCH(1),
+    YARD(36.0),
+    CENTIMETER(1.0/2.5),
+    GALLON(3.785),
+    LITRE(1);
 
     private final double baseUnitConversion;
 
