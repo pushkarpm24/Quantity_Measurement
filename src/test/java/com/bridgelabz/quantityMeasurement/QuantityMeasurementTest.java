@@ -219,4 +219,12 @@ public class QuantityMeasurementTest {
         boolean compareCheck = liter.compare(ml);
         Assert.assertTrue(compareCheck);
     }
+
+    @Test
+    public void given1GallonAnd3Point78Liters_whenAdded_shouldReturnVolumeResult() {
+        Quantity gallon = new Quantity(Unit.GALLON, 1.0);
+        Quantity liter = new Quantity(Unit.LITRE, 3.78);
+        double resultCheck = gallon.addition(liter);
+        Assert.assertEquals(7.56,resultCheck,0.0);
+    }
 }
