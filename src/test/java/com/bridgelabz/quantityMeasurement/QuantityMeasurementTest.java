@@ -211,4 +211,12 @@ public class QuantityMeasurementTest {
         boolean compareCheck = gallon.compare(liter);
         Assert.assertTrue(compareCheck);
     }
+
+    @Test
+    public void given1LiterAnd1000Ml_shouldReturnEqualVolume() {
+        Quantity liter = new Quantity(Unit.LITRE, 1.0);
+        Quantity ml = new Quantity(Unit.ML, 1000);
+        boolean compareCheck = liter.compare(ml);
+        Assert.assertTrue(compareCheck);
+    }
 }
