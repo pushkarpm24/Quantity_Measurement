@@ -227,4 +227,12 @@ public class QuantityMeasurementTest {
         double resultCheck = gallon.addition(liter);
         Assert.assertEquals(7.56,resultCheck,0.0);
     }
+
+    @Test
+    public void given1LiterAnd1000Ml_whenAdded_shouldReturnVolumeResult() {
+        Quantity liter = new Quantity(Unit.LITRE, 1.0);
+        Quantity ml = new Quantity(Unit.ML, 1000);
+        double resultCheck = liter.addition(ml);
+        Assert.assertEquals(2.0,resultCheck,0.0);
+    }
 }
