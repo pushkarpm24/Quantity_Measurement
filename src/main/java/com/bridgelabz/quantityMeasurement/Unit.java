@@ -7,7 +7,9 @@ public enum Unit {
     CENTIMETER(1.0/2.5),
     GALLON(3.78),
     LITRE(1),
-    ML(1.0/1000);
+    ML(1.0/1000),
+    KG(1000),
+    GRAM(1);
 
     private final double baseUnitConversion;
 
