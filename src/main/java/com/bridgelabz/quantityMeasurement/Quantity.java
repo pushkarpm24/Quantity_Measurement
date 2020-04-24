@@ -1,8 +1,6 @@
 package com.bridgelabz.quantityMeasurement;
 
-import java.util.Objects;
-
-public class Length {
+public class Quantity {
 
 
     public final Unit unit;
@@ -10,17 +8,17 @@ public class Length {
 
 
 
-    public Length(Unit unit, double value) {
+    public Quantity(Unit unit, double value) {
         this.value = value;
         this.unit = unit;
     }
 
-    public boolean compare(Length that) {
+    public boolean compare(Quantity that) {
         boolean check = unit.conversion(this, that);
         return check;
     }
 
-    public double addition(Length that) {
+    public double addition(Quantity that) {
         double result = unit.performAddition(this, that);
         return result;
     }
@@ -29,9 +27,9 @@ public class Length {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Length length = (Length) o;
-        return Double.compare(length.value, value) == 0 &&
-                unit == length.unit;
+        Quantity quantity = (Quantity) o;
+        return Double.compare(quantity.value, value) == 0 &&
+                unit == quantity.unit;
     }
 
 

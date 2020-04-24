@@ -14,12 +14,12 @@ public enum Unit {
         this.baseUnitConversion = baseUnitConversion;
     }
 
-    public boolean conversion(Length l1, Length l2) {
+    public boolean conversion(Quantity l1, Quantity l2) {
          return Double.compare(l1.value*l1.unit.baseUnitConversion,
                                 l2.value*l2.unit.baseUnitConversion) == 0;
     }
 
-    public double performAddition(Length l1, Length l2) {
+    public double performAddition(Quantity l1, Quantity l2) {
         double firstValue = l1.value*l1.unit.baseUnitConversion;
         double secondValue = l2.value*l2.unit.baseUnitConversion;
         return firstValue + secondValue;
