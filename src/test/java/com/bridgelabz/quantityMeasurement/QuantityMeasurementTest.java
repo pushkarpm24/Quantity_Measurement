@@ -235,4 +235,12 @@ public class QuantityMeasurementTest {
         double resultCheck = liter.addition(ml);
         Assert.assertEquals(2.0,resultCheck,0.0);
     }
+
+    @Test
+    public void given1KgAnd1000Grams_shouldReturnEqualWeight() {
+        Quantity kg = new Quantity(Unit.KG, 1.0);
+        Quantity gram = new Quantity(Unit.GRAM, 1000);
+        boolean compareCheck = kg.compare(gram);
+        Assert.assertTrue(compareCheck);
+    }
 }
