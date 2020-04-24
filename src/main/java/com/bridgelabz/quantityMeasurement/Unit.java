@@ -8,8 +8,9 @@ public enum Unit {
     GALLON(3.78),
     LITRE(1),
     ML(1.0/1000),
-    KG(1000),
-    GRAM(1);
+    KG(1),
+    GRAM(1.0/1000),
+    TONNE(1000);
 
     private final double baseUnitConversion;
 
