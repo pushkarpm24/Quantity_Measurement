@@ -203,4 +203,12 @@ public class QuantityMeasurementTest {
         double resultCheck = inch.addition(centimeter);
         Assert.assertEquals(3,resultCheck,0.0);
     }
+
+    @Test
+    public void given1GalonAnd3Point78Liters_shouldReturnEqualVolume() {
+        Quantity gallon = new Quantity(Unit.GALLON, 1.0);
+        Quantity liter = new Quantity(Unit.LITRE, 3.78);
+        boolean compareCheck = gallon.compare(liter);
+        Assert.assertTrue(compareCheck);
+    }
 }
