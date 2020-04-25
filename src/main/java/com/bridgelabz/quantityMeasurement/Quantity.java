@@ -23,6 +23,11 @@ public class Quantity {
         return result;
     }
 
+    public boolean temperature(Quantity that) {
+        boolean check = unit.compareTemperature(this, that);
+        return check;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

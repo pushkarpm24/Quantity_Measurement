@@ -259,4 +259,11 @@ public class QuantityMeasurementTest {
         double resultCheck = tonne.addition(gram);
         Assert.assertEquals(1001,resultCheck,0.0);
     }
+
+    @Test
+    public void given32FahrenhiteAnd0Degree_shouldReturnEqualTemperature() {
+        Quantity fahrenhite = new Quantity(Unit.FAHRENHEIT, 32.0);
+        Quantity degree = new Quantity(Unit.DEGREE, 0.0);
+        boolean compareCheck = fahrenhite.temperature(degree);
+    }
 }
