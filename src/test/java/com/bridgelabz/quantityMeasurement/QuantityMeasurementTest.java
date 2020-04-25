@@ -275,4 +275,12 @@ public class QuantityMeasurementTest {
         boolean compareCheck = fahrenhite.temperature(degree);
         Assert.assertTrue(compareCheck);
     }
+
+    @Test
+    public void givenNegative40AndNegative40_shouldReturnEqualTemprature() {
+        Quantity fahrenhite = new Quantity(Unit.FAHRENHEIT, -40.0);
+        Quantity degree = new Quantity(Unit.DEGREE, -40.0);
+        boolean compareCheck = fahrenhite.temperature(degree);
+        Assert.assertTrue(compareCheck);
+    }
 }
