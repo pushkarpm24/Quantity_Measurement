@@ -265,5 +265,14 @@ public class QuantityMeasurementTest {
         Quantity fahrenhite = new Quantity(Unit.FAHRENHEIT, 32.0);
         Quantity degree = new Quantity(Unit.DEGREE, 0.0);
         boolean compareCheck = fahrenhite.temperature(degree);
+        Assert.assertTrue(compareCheck);
+    }
+
+    @Test
+    public void given212FahrenhiteAnd100Degree_ahouldReturnEqualTemperature() {
+        Quantity fahrenhite = new Quantity(Unit.FAHRENHEIT, 212);
+        Quantity degree = new Quantity(Unit.DEGREE, 100);
+        boolean compareCheck = fahrenhite.temperature(degree);
+        Assert.assertTrue(compareCheck);
     }
 }
