@@ -10,7 +10,9 @@ public enum Unit {
     ML(1.0/1000),
     KG(1),
     GRAM(1.0/1000),
-    TONNE(1000);
+    TONNE(1000),
+    DEGREE(9/5),
+    FAHRENHEIT(5/9);
 
     private final double baseUnitConversion;
 
