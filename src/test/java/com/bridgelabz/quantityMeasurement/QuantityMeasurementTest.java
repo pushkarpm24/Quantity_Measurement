@@ -283,4 +283,15 @@ public class QuantityMeasurementTest {
         boolean compareCheck = fahrenhite.temperature(degree);
         Assert.assertTrue(compareCheck);
     }
+
+    @Test
+    public void givenDifferentQuantityTypes_whenAdded_shouldThrowException() throws QuantityMeasureException {
+        try {
+            Quantity kg1 = new Quantity(Unit.KG, 1.0);
+            Quantity inch1 = new Quantity(Unit.INCH, 1.0);
+            double result = kg1.addition(inch1);
+        }catch (QuantityMeasureException e){
+            Assert.assertEquals(QuantityMeasureException.ExceptionType.DIFFERENT_QUANTITY, e.type);
+        }
+    }
 }
