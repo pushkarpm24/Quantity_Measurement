@@ -294,4 +294,15 @@ public class QuantityMeasurementTest {
             Assert.assertEquals(QuantityMeasureException.ExceptionType.DIFFERENT_QUANTITY, e.type);
         }
     }
+
+    @Test
+    public void givenNegative40AndNegative40_whenAdded_shouldThrowTheException() throws QuantityMeasureException {
+        try {
+            Quantity fahrenhite = new Quantity(Unit.FAHRENHEIT, 212);
+            Quantity degree = new Quantity(Unit.DEGREE, 100);
+            boolean compareCheck = fahrenhite.temperature(degree);
+        } catch (QuantityMeasureException e) {
+            Assert.assertEquals(QuantityMeasureException.ExceptionType.TEMPERATURE_EXCEPTION, e.type);
+        }
+    }
 }
