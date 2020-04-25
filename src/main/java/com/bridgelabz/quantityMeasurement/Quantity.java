@@ -13,17 +13,17 @@ public class Quantity {
         this.unit = unit;
     }
 
-    public boolean compare(Quantity that) {
+    public boolean compare(Quantity that) throws QuantityMeasureException {
         boolean check = unit.conversion(this, that);
         return check;
     }
 
-    public double addition(Quantity that) {
+    public double addition(Quantity that) throws QuantityMeasureException {
         double result = unit.performAddition(this, that);
         return result;
     }
 
-    public boolean temperature(Quantity that) {
+    public boolean temperature(Quantity that) throws QuantityMeasureException {
         boolean check = unit.compareTemperature(this, that);
         return check;
     }
