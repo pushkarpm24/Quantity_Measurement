@@ -300,7 +300,7 @@ public class QuantityMeasurementTest {
         try {
             Quantity fahrenhite = new Quantity(Unit.FAHRENHEIT, 212);
             Quantity degree = new Quantity(Unit.DEGREE, 100);
-            boolean compareCheck = fahrenhite.temperature(degree);
+            double compareCheck = fahrenhite.addition(degree);
         } catch (QuantityMeasureException e) {
             Assert.assertEquals(QuantityMeasureException.ExceptionType.TEMPERATURE_EXCEPTION, e.type);
         }
